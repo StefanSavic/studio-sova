@@ -1,0 +1,64 @@
+
+// $zuta : #F5AB35;
+.sova_button{
+	margin: 20px;
+	border:none;
+	font-size:2.5em;
+	background:$crvena;
+	color:white;
+	padding: 0.5em 2em;
+	
+}
+.sova_close{
+	position: absolute;
+	top:50px;
+	right:50px;
+	font-size:1.5em;
+	padding:0 0.5em;
+	@include flex-center;
+	background:transparent;
+	border:none;
+}
+.sova_zakazi{
+	background:transparent;
+	border:3px solid white;
+	// cursor: pointer;
+}
+.sova_zakazi:hover{
+	background-color:$zuta;
+}	
+
+.sova_button_fb:hover{
+	background-color:$plava;
+
+}
+.sova_button_fb{
+	@include flex-center;
+}
+
+
+.admin_button{
+	font-size :1em;
+	background:$zuta;
+	 
+	 &:hover{
+	 	background:white;
+	 	color:black;
+	 }
+}
+
+
+@media  (min-width:1200px) {
+.back-to-top{
+	display:block;
+	position: absolute;
+	right:2em;
+	bottom:2em;
+	}
+}
+@media  (max-width:1200px) {
+	.sova_button{
+		padding:0 0.5em;
+
+	}
+}

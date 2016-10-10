@@ -1,0 +1,19 @@
+@font-face {
+ 	font-family:bariol;  
+ 	src: url(fonts/bariol_regular-webfont.woff) ;  
+ 	font-weight:normal;
+ }
+
+
+ body{
+ 	font-family:bariol;
+ 	overflow-x:hidden;
+ 	:focus{
+ 		outline: none;
+ 	}
+ 	color:black;
+ }
+
+ form ul li{
+ 	list-style-type: none;
+ }
