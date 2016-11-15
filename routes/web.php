@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MainHomeController@index');
+Route::get('/admin', 'AdminController@index');
 
-Route::resource('posts','PostsController');
+Route::resource('/admin/termini', 'SchedulesController');
+
+Route::resource('admin/posts','PostsController');
