@@ -1,25 +1,24 @@
-
+<div class="form-group">
 	
 	{!! Form::label('title','Naslov:') !!}
-	{!! Form::text('title',null,[]) !!}
+	{!! Form::text('title',null,["class" =>"form-control"]) !!}
 
+</div>
 
-
+<div class="form-group">
 	
 	{!! Form::label('body','Text:') !!}
-	{!! Form::textarea('body',null,["v-model" => "message"]) !!}
+	{!! Form::textarea('body',null,["class" =>"form-control"]) !!}
+
+</div>
 
 
 
-	{!! Form::submit($submitButtonText,
-		[
-		'class'=>'btn btn-primary',
-		'v-show'=> "message"
-		]) !!}
-		<span class="error" v-show= "!message">
-			Moraš uneti tekst obaveštenja!
-		</span>
+<div class="form-group">
+	{!! Form::label('','Select image to upload:') !!}
+	{!! Form::file('image',null,["class" =>"form-control"]) !!}
+</div>
 
-
-
-			
+<div class="form-group">
+	{!! Form::submit($submitButtonText,['class'=>'btn btn-yellow form-control']) !!}
+</div>

@@ -1,25 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Admin</title>
-	<link rel="stylesheet" href="/css/app.css">
-</head>
-<body class="admin">
-	<div class="container">
-		<a href="{{action('PostsController@create')}}" class=" btn btn-primary">Create New Post</a>
+@extends('layouts.admin',[$var = 'Objave'])
 
-		</hr>
-		@foreach($posts as $post)
-		<article class='adminBlog'>
-			<h2 class="text-center text-capitalize">
-				{{$post->title}}
-			</h2>
-			<span class="text-center">{{$post->created_at}}</span>
-			<p class="text-center">{{$post->body}}</p>
-			<a href="{{action('PostsController@edit',$post->id)}}">Edit</a>
-		</article>
-		@endforeach	
+@section('content')
+
+@foreach($posts as $post)
+<article class="row margin-reset">
+	<div class="col-md-9">
+		<h2>
+			<a class="yellow" href="{{ url('/admin/posts',$post->id) }}">{{$post->title}}</a>
+		</h2>
+		<span>{{$post->created_at}}</span>
+		<p>{{$post->body}}</p>
+		@if($post->image)
+		<img src="/uploaded/{{$post->image}}" alt="{{$post->image}}">
+		@endif
 	</div>
-</body>
-</html>
+	<div class="col-md-3 btn-wrapper">
+		<a href="{{action('PostsController@edit',$post->id)}}" class="btn btn-yellow">Izmeni</a>
+		{!! Form::open(['method' => 'DELETE','action' => ['PostsController@destroy',$post->id]]) !!}
+		{!! Form::submit('Obriši', ['class' => 'btn btn-danger btn-delete']) !!}
+		{!! Form::close() !!}
+	</div>
+</article>
+@endforeach
+
+@stop

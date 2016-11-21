@@ -5846,7 +5846,8 @@ form ul li {
   list-style-type: none; }
 
 * {
-  font-family: bariol; }
+  font-family: bariol;
+  color: white; }
 
 *:focus {
   outline: none; }
@@ -5857,7 +5858,7 @@ ul li {
 a {
   color: white; }
 
-body {
+.adminBody {
   background: url("/img/Music-equipment3.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
@@ -5874,18 +5875,24 @@ input:-webkit-autofill {
 input:focus:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset !important; }
 
+.adminBody .zauzeto {
+  background: #F5AB35; }
+
 .zauzeto {
   padding: 0.5em;
-  background: #F5AB35;
+  background: #1b2052;
   color: white;
   border-radius: 3px; }
 
 thead tr th {
-  color: #F5AB35;
+  color: #1b2052;
   text-transform: capitalize;
   font-weight: bold; }
 
-td:first-child {
+.adminBody thead tr th {
+  color: #F5AB35; }
+
+.adminBody td:first-child {
   color: #F5AB35;
   font-size: 1.2em; }
 
@@ -5947,8 +5954,9 @@ th, td {
 .schedules {
   background-color: #1b2052; }
 
-h1, h2 {
-  color: #F5AB35; }
+.adminBody h1, h2 {
+  color: #F5AB35;
+  padding-bottom: 0; }
 
 #divLocal {
   position: absolute;
@@ -5968,8 +5976,10 @@ input, textarea {
 input[type="file"] {
   background: #F5AB35; }
 
+label {
+  color: white !important; }
+
 article {
-  width: 60%;
   background-color: rgba(0, 0, 0, 0.5) !important; }
   article p, article span {
     color: white; }

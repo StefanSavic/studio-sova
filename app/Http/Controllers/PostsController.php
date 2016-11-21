@@ -27,25 +27,43 @@ class PostsController extends Controller
 
    public function store(Requests\PostRequest $request)
    {
-   		$post = Post::create($request->all());
-   		$post->save();
 
-   		return redirect('posts');
+     $post = Post::create($request->all());
+     
+     $post->save();
+
+     return redirect('admin/posts');
    }
 
    public function edit($id)
-	{
-	$post = Post::findOrFail($id);
+   {
 
-	return view('posts.edit',compact('post'));
-	}
+      $post = Post::findOrFail($id);
 
-	public function update($id,postRequest $request)
-	{
-		$post = post::findOrFail($id);
+      return view('posts.edit',compact('post'));
+   
+   }
 
-		$post->update($request->all());
+   public function update($id,postRequest $request)
+   {
 
-		return redirect('posts');
-	}
+   $post = Post::findOrFail($id);
+
+   $post->update($request->all());
+
+   return redirect('posts');
+   
+   }
+
+   public function destroy($id)
+   {
+
+   $post = Post::findOrFail($id);
+
+   $post->delete($id);
+
+   return redirect('admin/posts');
+   
+   }
 }
+

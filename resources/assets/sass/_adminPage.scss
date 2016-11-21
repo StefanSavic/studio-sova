@@ -1,5 +1,6 @@
 *{
 	font-family:bariol;
+	color:white;
 
 }
 *:focus{
@@ -11,7 +12,7 @@ ul li {
 a{
 	color:white;
 }
-body{
+.adminBody{
 	background:url('/img/Music-equipment3.jpg');
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -34,19 +35,25 @@ input:focus:-webkit-autofill {
 .tableView{
 	// margin-top:5em;
 }
+.adminBody .zauzeto{
+	background:$zuta;
+}
 .zauzeto{
 	padding:0.5em;
-	background:$zuta;
+	background:$plava;
 	color:white;
 	border-radius:3px;
 }
 thead tr th{
-	color:$zuta;
+	color:$plava;
 	text-transform:capitalize;
 	font-weight:bold;
 }
+.adminBody thead tr th{
+	color:$zuta
+}
 
- td:first-child{
+ .adminBody td:first-child{
 	color:$zuta;
 	font-size:1.2em;
 }
@@ -111,8 +118,9 @@ th,td{
 	background-color:$plava;
 }
 
-h1,h2{
+.adminBody h1,h2{
 	color:$zuta;
+	padding-bottom:0;
 }
 h2{
 
@@ -139,9 +147,11 @@ input,textarea{
 input[type="file"]{
 	background:$zuta;
 }
-
+label{
+	color:white!important;
+}
 article{
-	width: 60%;
+	// width: 60%;
 	background-color:rgba(0,0,0,0.5)!important;
 	p,span{
 		color: white;

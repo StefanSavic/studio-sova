@@ -106,6 +106,17 @@ $(window).on('scroll',function(){
 
 });	
 
+//Clock
+
+$(function(){
+  setInterval(function(){
+    var divUtc = $('#divUTC');
+    var divLocal = $('#divLocal');  
+   
+    divLocal.text(moment().format('HH:mm'));        
+  },1000);
+});
+
 
 })();
 

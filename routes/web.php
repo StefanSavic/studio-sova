@@ -14,6 +14,7 @@
 Route::get('/', 'MainHomeController@index');
 Route::get('/admin', 'AdminController@index');
 
-Route::resource('/admin/termini', 'SchedulesController');
+Route::get('admin/schedules/edit','ScheduleController@edit');	
+Route::patch('admin/schedules','ScheduleController@update');	
 
 Route::resource('admin/posts','PostsController');
