@@ -9,3 +9,4 @@ class Schedule extends Model
    public $timestamps = false;
    protected $fillable = ['pon', 'uto', 'sre', 'cet', 'pet', 'sub'];
 }
+	

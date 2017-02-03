@@ -15,9 +15,10 @@ require('laravel-elixir-vue-2');
 
  elixir(mix => {
  	mix.sass('app.scss')
- 	.webpack('app.js');
+ 	.webpack('app.js')
  	mix.browserSync({
  		proxy: 'studio-sova.dev'
  	});
- 	 mix.scripts(['bootstrap.js','scrolling-nav.js','jquery.easing.min.js'], 'public/js/app.js');
+ 	 mix.scripts(['jquery.js','jquery.easing.min.js','scrolling-nav.js'], 'public/js/app.js');
+ 	 mix.scripts(['jquery.js','moment-with-locales.min.js','admin.js'], 'public/js/admin.js');
 });

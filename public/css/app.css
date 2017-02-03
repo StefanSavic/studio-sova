@@ -5846,8 +5846,9 @@ form ul li {
   list-style-type: none; }
 
 * {
-  font-family: bariol;
-  color: white; }
+  font-family: "Ubuntu",sans-serif;
+  color: white;
+  font-weight: 500; }
 
 *:focus {
   outline: none; }
@@ -5861,7 +5862,12 @@ a {
 .adminBody {
   background: url("/img/Music-equipment3.jpg");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  overflow-x: visible !important; }
+
+@media only screen and (min-width: 992px) {
+  .adminBody {
+    height: 100vh; } }
 
 .sidebar-nav li a:hover {
   color: #F5AB35; }
@@ -5897,9 +5903,9 @@ thead tr th {
   font-size: 1.2em; }
 
 th, td {
-  padding: 0.8em !important;
+  padding: 0.8em 1.4em;
+  font-size: 1.4em;
   text-align: center;
-  font-size: 1.2em;
   color: white; }
 
 .l-heading {
@@ -5959,14 +5965,12 @@ th, td {
   padding-bottom: 0; }
 
 #divLocal {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.2em 4.5em;
+  padding: 0.2em 3em;
   font-size: 3em;
   color: #F5AB35; }
 
 hr {
+  margin-top: 0 !important;
   border-top: 1px solid #F5AB35; }
 
 input, textarea {
@@ -5980,14 +5984,12 @@ label {
   color: white !important; }
 
 article {
-  background-color: rgba(0, 0, 0, 0.5) !important; }
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  margin-bottom: 1em; }
   article p, article span {
     color: white; }
   article img {
     padding: 1em 0; }
-
-.margin-reset {
-  margin: 0 !important; }
 
 .yellow-color {
   color: #F5AB35; }
@@ -6000,11 +6002,16 @@ article {
     margin-right: 2em; }
 
 .btn-yellow {
-  background: #F5AB35 !important; }
+  background: #F5AB35 !important;
+  color: #fff; }
 
 .btn-delete {
   background: #b11814 !important;
   border-color: #b11814 !important; }
+
+.sova-alert {
+  background: black;
+  color: #b11814; }
 
 /* $background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/13460/dark_wall.png'); */
 /* .roundedOne */
@@ -6050,6 +6057,64 @@ article {
       opacity: 1; }
 
 /* end .roundedOne */
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  #divLocal {
+    padding: 0.2em; } }
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 1033px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block; }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+  tr {
+    border-bottom: 1px solid #F5AB35; }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    /* border-bottom: 1px solid #eee; */
+    position: relative;
+    padding-left: 50%;
+    padding-right: 2em; }
+  .adminBody td:before {
+    color: #F5AB35; }
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    left: 6px;
+    width: 45%;
+    padding-right: 33px;
+    white-space: nowrap;
+    color: #1b2052; }
+  /*
+	Label the data
+	*/
+  td:nth-of-type(1):before {
+    content: "Vreme"; }
+  td:nth-of-type(2):before {
+    content: "Ponedeljak"; }
+  td:nth-of-type(3):before {
+    content: "Utorak"; }
+  td:nth-of-type(4):before {
+    content: "Sreda"; }
+  td:nth-of-type(5):before {
+    content: "Cetvrtak"; }
+  td:nth-of-type(6):before {
+    content: "Petak"; }
+  td:nth-of-type(7):before {
+    content: "Subota "; }
+  td:nth-of-type(8):before {
+    content: "Nedelja"; } }
+
 /* Toggle Styles */
 #wrapper {
   padding-left: 0;
@@ -6081,7 +6146,7 @@ article {
 
 #wrapper.toggled #page-content-wrapper {
   position: absolute;
-  margin-right: -250px; }
+  margin-right: -200px; }
 
 /* Sidebar Styles */
 .sidebar-nav {
@@ -6122,6 +6187,9 @@ article {
   color: #fff;
   background: none; }
 
+.sidebar__btn {
+  display: none; }
+
 @media (min-width: 768px) {
   #wrapper {
     padding-left: 250px; }
@@ -6137,6 +6205,28 @@ article {
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0; } }
+
+@media (max-width: 768px) {
+  .sidebar__btn {
+    display: block; } }
+
+@media (max-width: 435px) {
+  td span {
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all; }
+  .menu-toggle {
+    content: "Menu"; }
+  tr td:first-child {
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all; }
+  .schedule-time {
+    color: #F5AB35; } }
+
+.padding-left {
+  padding-left: 13em; }
+
+.padding-left5 {
+  padding-left: 5em; }
 
 .goLeft {
   -webkit-animation: goLeft 0.3s ease-in-out;
@@ -6274,7 +6364,7 @@ a:focus {
 
 .blog-post {
   opacity: 0;
-  padding: 50px 100px;
+  padding: 50px 0px;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.8);
   -webkit-transition: all 0.3s ease-in-out;
@@ -6414,6 +6504,7 @@ a:focus {
 
 #termini {
   padding-top: 80px;
+  padding-bottom: 80px;
   background: url("/img/3slikatermini.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -6431,13 +6522,13 @@ a:focus {
     font-weight: bold; }
 
 #termini > :first-child {
-  margin-bottom: 1em; }
+  margin-bottom: 0.5; }
 
 @media (max-width: 799px) {
   #termini {
     height: auto; } }
 
-.jumbotron {
+.container-jumbotron {
   width: 100%;
   display: -webkit-box;
   display: flex;
@@ -6447,13 +6538,16 @@ a:focus {
   align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.5); }
-  .jumbotron h1 {
+  flex-direction: column; }
+  .container-jumbotron h1 {
     margin: 0 !important;
     background: #1b2052;
     width: 260px;
     padding: 0; }
+  .container-jumbotron td, .container-jumbotron th {
+    background-color: rgba(255, 255, 255, 0.5); }
+  .container-jumbotron td:first-child {
+    color: #1b2052; }
 
 #kontakt {
   position: relative;

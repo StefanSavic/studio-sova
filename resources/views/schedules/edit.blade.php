@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 {!! Form::model($schedules,['method'=>'PATCH', 'action' => ['ScheduleController@update']]) !!}
 <table>
 	<thead>
@@ -20,7 +21,7 @@
 	<tr>
 		@foreach($schedules as $schedule)
 		<td>
-			{{$schedule->reservation_time}}
+		{{$schedule->reservation_time}}
 		</td>
 
 		<td>

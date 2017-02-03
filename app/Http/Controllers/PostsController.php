@@ -32,6 +32,8 @@ class PostsController extends Controller
      
      $post->save();
 
+     flash('Objava Postavljena!','success');
+
      return redirect('admin/posts');
    }
 
@@ -39,6 +41,7 @@ class PostsController extends Controller
    {
 
       $post = Post::findOrFail($id);
+
 
       return view('posts.edit',compact('post'));
    
@@ -51,7 +54,9 @@ class PostsController extends Controller
 
    $post->update($request->all());
 
-   return redirect('posts');
+   flash('Objava Izmenjena!','success');
+
+   return redirect('admin/posts');
    
    }
 
@@ -61,7 +66,7 @@ class PostsController extends Controller
    $post = Post::findOrFail($id);
 
    $post->delete($id);
-
+   flash('Objava Izbrisana!','success');
    return redirect('admin/posts');
    
    }

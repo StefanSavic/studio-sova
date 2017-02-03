@@ -50,7 +50,7 @@
 						<td>
 							<input name="ned{{ $reservationTime->id}}" type="checkbox"@if ($reservationTime->pon)checked @endif>
 						</td>
-
+ö
 					</tr>
 					@endforeach 		
 				</table>

@@ -4,7 +4,7 @@
 	{!! Form::open(['url' => 'admin/posts','enctype'=>"multipart/form-data"]) !!}
 	@include('posts.form',['submitButtonText' => 'Objavi'])
 	{!! Form::close() !!}
-{{-- @include ('errors.list') --}}
+@include ('errors.list')
 @stop
 
 

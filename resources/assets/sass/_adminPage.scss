@@ -1,6 +1,9 @@
 *{
-	font-family:bariol;
+	font-family:"Ubuntu",sans-serif;
 	color:white;
+	// letter-spacing: 1px;
+	font-weight:500;
+	
 
 }
 *:focus{
@@ -16,10 +19,17 @@ a{
 	background:url('/img/Music-equipment3.jpg');
 	background-size:cover;
 	background-repeat:no-repeat;
+	overflow-x: visible!important;
 
 }
+@media only screen and (min-width : 992px) {
+	.adminBody{
+		height: 100vh;
+			
+	}
+}
 .sidebar-nav li a:hover{
-		color:$zuta;
+	color:$zuta;
 }
 .sidebar-brand a{
 	font-weight:bold;
@@ -32,9 +42,6 @@ input:focus:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
 
-.tableView{
-	// margin-top:5em;
-}
 .adminBody .zauzeto{
 	background:$zuta;
 }
@@ -53,16 +60,15 @@ thead tr th{
 	color:$zuta
 }
 
- .adminBody td:first-child{
+.adminBody td:first-child{
 	color:$zuta;
 	font-size:1.2em;
 }
 
 th,td{
-	// background-color:rgba(0,0,0,0.5)!important;
-	padding:0.8em!important;
+	padding: 0.8em 1.4em;
+		font-size: 1.4em;
 	text-align:center;
-	font-size:1.2em;
 	color:white;
 }
 .l-heading{
@@ -122,21 +128,16 @@ th,td{
 	color:$zuta;
 	padding-bottom:0;
 }
-h2{
 
-	// float:right;
-}
 #divLocal{
-	position: absolute;
-	top:0;
-	right:0;
-	padding:0.2em 4.5em;
+	padding:0.2em 3em;
 	font-size:3em;
 	color:$zuta;
 }
 
 hr{
-    border-top: 1px solid $zuta;
+	margin-top:0!important;
+	border-top: 1px solid $zuta;
 }
 
 input,textarea{
@@ -156,6 +157,7 @@ article{
 	p,span{
 		color: white;
 	}
+	margin-bottom:1em;
 
 	// max-resolution: resgin-top:1em;
 	
@@ -163,10 +165,6 @@ article{
 	img{
 		padding:1em 0;
 	}
-}
-
-.margin-reset{
-	margin:0!important;
 }
 
 .yellow-color{
@@ -181,58 +179,140 @@ article{
 }
 .btn-yellow{
 	background:$zuta!important;
-	
-	
+	color:#fff;
 }
 .btn-delete{
 	background:$crvena!important;
 	border-color:$crvena!important;
 }
+
+
+// Errors list
+.sova-alert{
+	background:black;
+	color:$crvena;
+}
+
+// Schedule buttons
+
 $activeColor: $zuta; //green
 $darkenColor: darken($activeColor, 20%);
 /* $background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/13460/dark_wall.png'); */$background: #3498db;
 /* .roundedOne */
 .roundedOne {
-  width: 28px;
-  height: 28px;
-  position: relative;
-  margin: 0 auto;
-  background: white;
-  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-  border-radius: 50px;
-  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-  label {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    background: linear-gradient(to bottom, #222 0%, #45484d 100%);
-    border-radius: 50px;
-    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
-    &:after {
-      content: '';
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      background: $activeColor;
-      background: linear-gradient(to bottom, $activeColor 0%, $darkenColor 100%);
-      opacity: 0;
-      border-radius: 50px;
-      box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-    }
-    &:hover::after {
-      opacity: 0.3;
-    }
-  }
-  input[type=checkbox] {
-    visibility: hidden;
-    &:checked + label:after {
-      opacity: 1;
-    }
-  }    
+	width: 28px;
+	height: 28px;
+	position: relative;
+	margin: 0 auto;
+	background: white;
+	background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	border-radius: 50px;
+	box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	label {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		position: absolute;
+		left: 4px;
+		top: 4px;
+		background: linear-gradient(to bottom, #222 0%, #45484d 100%);
+		border-radius: 50px;
+		box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+		&:after {
+			content: '';
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			background: $activeColor;
+			background: linear-gradient(to bottom, $activeColor 0%, $darkenColor 100%);
+			opacity: 0;
+			border-radius: 50px;
+			box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+		}
+		&:hover::after {
+			opacity: 0.3;
+		}
+	}
+	input[type=checkbox] {
+		visibility: hidden;
+		&:checked + label:after {
+			opacity: 1;
+		}
+	}    
 }
 /* end .roundedOne */
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+	#divLocal{
+		padding:0.2em;
+	}
+
+}
+
+// Table Responsive
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 1033px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border-bottom: 1px solid $zuta; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		/* border-bottom: 1px solid #eee; */ 
+		position: relative;
+		padding-left: 50%;
+		padding-right:2em; 
+		// padding:0.8em 1em;
+		// font-size:1.1em;
+	}
+	
+	.adminBody td:before {
+		color:$zuta;
+	} 
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 6px;
+		width: 45%; 
+		padding-right: 33px; 
+		white-space: nowrap;
+		color:$plava;
+
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Vreme"; }
+	td:nth-of-type(2):before { content: "Ponedeljak"; }
+	td:nth-of-type(3):before { content: "Utorak"; }
+	td:nth-of-type(4):before { content: "Sreda"; }
+	td:nth-of-type(5):before { content: "Cetvrtak"; }
+	td:nth-of-type(6):before { content: "Petak"; }
+	td:nth-of-type(7):before { content: "Subota "; }
+	td:nth-of-type(8):before { content: "Nedelja"; }
+	
+}

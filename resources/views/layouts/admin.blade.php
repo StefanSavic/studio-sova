@@ -12,7 +12,8 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" >
+    <link rel="shortcut icon" href="{{ asset('/img/favicon.ico') }}" >
+
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -20,8 +21,7 @@
             ]); ?>  
         </script>
     </head>
-    <body class="adminBody">
-        <div id="app">
+    <body class="adminBody overflow-y">
 
             @if(Request::url() === 'http://laravel-sandbox.dev/login')
 
@@ -59,6 +59,10 @@
                             {{ csrf_field() }}
                         </form>
                     </li>
+                    
+                        <a href="#menu-toggle" class="btn btn-default sidebar__btn" id="menu-toggle">Menu</a>
+
+                    
                 </ul>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -66,8 +70,9 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
-                        <h1>{{{$var or 'Dobrodošao'}}}</h1>
+                        <div class="col-md-9">
+                            <h1>{{{$var or 'Dobrodošao'}}}</h1>
+                            <a href="#menu-toggle" class="btn btn-default sidebar__btn menu-toggle" id="menu-toggle">Toggle Menu</a>
                         </div>
                         <div class="col-md-3" id="divLocal"></div> 
                     </div>
@@ -84,15 +89,8 @@
         
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
-        <script>
-            new Vue({
-                el:'#app',
-                data:{
-                    message:''
-                }
-            }); 
-        </script>
-        <script src="/js/moment-with-locales.min.js"></script>
-        <script src="/js/app.js"></script>
-    </body>
-    </html>
+
+      
+        <script src="/js/admin.js"></script>
+</body>
+</html>

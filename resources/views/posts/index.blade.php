@@ -1,9 +1,10 @@
 @extends('layouts.admin',[$var = 'Objave'])
 
 @section('content')
+@include('flash::message')
 
 @foreach($posts as $post)
-<article class="row margin-reset">
+<article class="row">
 	<div class="col-md-9">
 		<h2>
 			<a class="yellow" href="{{ url('/admin/posts',$post->id) }}">{{$post->title}}</a>
@@ -22,5 +23,6 @@
 	</div>
 </article>
 @endforeach
+
 
 @stop
