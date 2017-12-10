@@ -16,7 +16,7 @@
 
 // Partials
 @import "sidebar";
- 
+
 
  .goLeft{
 
@@ -56,7 +56,7 @@
 
  }
  .navigation{
- 	padding-top:20px;	
+ 	padding-top:20px;
  	margin-right: 100px;
  	font-size: 1.5em;
 
@@ -72,10 +72,10 @@
  			position: absolute;
  			top:-5px;
  			left:-60px;
- 			-webkit-transform:scale(0.5,0.5); 	
- 			-ms-transform:scale(0.5,0.5); 	
- 			-o-transform:scale(0.5,0.5); 	
- 			transform:scale(0.5,0.5); 	  
+ 			-webkit-transform:scale(0.5,0.5);
+ 			-ms-transform:scale(0.5,0.5);
+ 			-o-transform:scale(0.5,0.5);
+ 			transform:scale(0.5,0.5);
  		}
  	}
  }
@@ -123,7 +123,7 @@ display: none;
 
 .sova-hero{
 	height: 100vh !important;
-	background:url('/img/1slika.png');
+  background: url("/img/hero-bkg2.jpg");
 	background-position:center ;
 	background-size:cover;
 	@include flex-center;
@@ -165,7 +165,7 @@ display: none;
 	p{font-size:1.6em;}
 
 	@media (max-width:799px){
-		
+
 		background-position:right;
 		padding-bottom:50px;
 		height:auto;
@@ -178,17 +178,17 @@ display: none;
 	padding:50px 0px;
 	box-sizing:border-box;
 	background:rgba(255,255,255,0.8);
-	-webkit-transition:all 0.3s ease-in-out; 
-	-o-transition:all 0.3s ease-in-out; 
-	transition:all 0.3s ease-in-out; 
-	transform:translateY; 
+	-webkit-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+	transform:translateY;
 	z-index: 2000;
 	@include flex-center;
 	&.is-showing{
 		opacity:1;
 		transform:rotateZ(0);
 	}
-	
+
 	@keyframes bounce{
 
 		0%{transform:scale(1.0,1.0)}
@@ -249,7 +249,7 @@ display: none;
 	background:rgba(0,0,0,0.6);
 	display:none;
 	transition:all linear;
-	justify-content: center; 
+	justify-content: center;
 	align-items: center;
 	flex-direction:column;
 }
@@ -257,7 +257,7 @@ display: none;
 .flex-center-1{
 	@include flex-center;
 	display:flex!important;
-	
+
 }
 .flex-center{
 	@include flex-center;
@@ -288,7 +288,7 @@ display: none;
 #termini > :first-child{
 
 	margin-bottom:0.5;
-	
+
 }
 @media (max-width:799px){
 	#termini{
@@ -298,7 +298,7 @@ display: none;
 
 .container-jumbotron{
 	width: 100%;
-	
+
 	@include flex-center;
 	h1{
 		margin: 0!important;
@@ -307,7 +307,7 @@ display: none;
 		padding: 0;
 	}
 	td,th{
-		
+
 		background-color:rgba(255,255,255,0.5);
 	}
 	td:first-child{

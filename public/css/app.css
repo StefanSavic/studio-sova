@@ -6061,7 +6061,7 @@ article {
   #divLocal {
     padding: 0.2em; } }
 
-/* 
+/*
 Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px
 and also iPads specifically.
@@ -6309,6 +6309,7 @@ a:focus {
 .sova-hero {
   height: 100vh !important;
   background: url("/img/1slika.png");
+  background: url("/img/hero-bkg2.jpg");
   background-position: center;
   background-size: cover;
   display: -webkit-box;
